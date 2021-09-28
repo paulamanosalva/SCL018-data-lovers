@@ -1,0 +1,42 @@
+*{
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #A3BEF3;
+}
+
+body {
+    text-align: center;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background: #000000;
+}
+
+header { 
+    height: 5em;
+    width: 100%;
+    z-index: 12;
+    position: fixed;
+}
+
+.logo-header-container{
+    height: 5em;
+    display: flex;
+    align-items: center;
+    margin-left: 0.5%;
+}
+
+.logo-header{
+    height: 80%;
+    width: auto;
+    float: left;
+}
+
+nav{
+    
+}
