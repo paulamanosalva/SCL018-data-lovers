@@ -1,5 +1,6 @@
 *{
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -8,35 +9,135 @@ a {
 }
 
 body {
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .wrapper {
     width: 100%;
-    margin: 0 auto;
     background: #000000;
-}
-
-header { 
-    height: 5em;
-    width: 100%;
-    z-index: 12;
-    position: fixed;
-}
-
-.logo-header-container{
-    height: 5em;
+    height: 3em;
     display: flex;
     align-items: center;
-    margin-left: 0.5%;
+    
+}
+
+nav{
+    width: 100%;
+    display: flex;
+}
+
+.nav-links{
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a{
+    display: flex;
+    margin-left: 5%;
+}
+
+.btn-container{
+    display: flex;
+    width: 40%;
+    justify-content: flex-end;
+    margin-right: 2%;
+    outline: none;
+}
+
+/* 
+.nav-links a{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+} */
+
+
+.logo-header-container{
+    /* height: 50px; */
+    margin-left: 1%;
+    /* padding:0;
+    display: flex; */
+  
+    /* margin-left: 0.5%;  */
 }
 
 .logo-header{
     height: 80%;
-    width: auto;
+    width: 2.5rem;
     float: left;
 }
 
-nav{
-    
+nav a{
+    font-size: 1em;
+    font-weight: bold;
+    /* display: flex; */
+    /* justify-content: space-around; */
+}
+
+button.play-btn{
+    background-color: rgb(150,240,239);
+    border-radius: 3px;
+    border:none;
+    width: 6.25rem;
+    height: 1.5rem;
+    font-weight: bold;
+} 
+
+.champion-table-container {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+table{
+    margin: 0;
+    width: 60%;
+    /* border: 3px; */
+    /* border-color: #000000; */
+    color:  white;
+    /* border: solid 5px black; */
+    background-color: #A9BCEF;
+    text-align: center;
+    border-radius: 3px;
+}
+
+thead{
+    /* border-bottom: solid 5px black; */
+    color: #0a0b26;
+    height: 1.75em;
+
+ }
+
+tbody{
+    background-color: #0A0B26 ;
+}    
+
+th, td{
+    /* border: solid 5px #29448d; */
+    /* border-color: #000000; */
+    margin: 0%;
+    padding: 0%;
+    height: 1.75em;
+}
+
+td{
+    border: solid 2px #A9BCEF; ;
+}
+
+.kda-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.img-kda{
+    width: 60%;
 }

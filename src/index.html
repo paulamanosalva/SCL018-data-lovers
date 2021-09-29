@@ -5,26 +5,66 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <div class="box-area">
-      <header>
-        <div class="wrapper">
+    <div id="root"></div>
+      <header class="wrapper">
+        
           <div class="logo-header-container">
             <img class="logo-header" src="./images/lol-header.png" />
-            <nav>
+          </div>
+          <nav>
+            <div class="nav-links">
               <a href="#">Game</a>
               <a href="#">Champions</a>
               <a href="#">Statistics</a>
               <a href="#">Resources</a>
-              <a href="https://signup.na.leagueoflegends.com/en/signup/index#/"
-                target="_blank"><button>Play now!</button></a>
-            </nav>
-          </div>
-        </div>
+            </div>
+            <div class="btn-container">
+              <a class="play-btn" href="https://signup.na.leagueoflegends.com/en/signup/index#/"
+              target="_blank"><button class="play-btn">Play now!</button></a>
+            </div>  
+              
+          </nav>
       </header>
-      <div id="root"></div>
+      <div class="kda-container">
+        <img class="img-kda" src="./images/kda.png" alt="">
+      </div>
+      
+      
+      <div class="champion-table-container">
+        <table class="champion-table">
+          <thead>
+            <tr>
+              <th>Champion</th>
+              <th>Title</th>
+              <th>Class</th>
+              <th>Difficulty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ahri</td>
+              <td>the nine tailed fox</td>
+              <td>assassin</td>
+              <td>medium</td>
+            </tr>
+            <tr>
+              <td>Ahri</td>
+              <td>the nine tailed fox</td>
+              <td>assassin</td>
+              <td>medium</td>
+            </tr>
+            <tr>
+              <td>Ahri</td>
+              <td>the nine tailed fox</td>
+              <td>assassin</td>
+              <td>medium</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+
       <script src="main.js" type="module"></script>
-    </div>
   </body>
 </html>
