@@ -26,8 +26,8 @@ const drawCard = (champions) => {
     return `
     <div class="accordion-container">
         <button class="champion-btn">
-        <img src=${champions.img}>  <h2>${champions.name}</h2> <h3>${champions.title}</h3>
-        <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/Akali.png"><img src="https://www.masterypoints.com/assets/img/lol/champion_icons/Akali.png">
+        <div class="champ-icon"><img  src=${champions.img}></div>  <h2 class="champ-name">${champions.name}</h2> <h3 class="champ-title">${champions.title}</h3>
+        <div class="champ-class"><img src="./images/assassin-white-png"></div> <div class="champ-difficulty"><img src="https://imgur.com/y1xONJG"></div>
         </button>
     </div>`;
 };

@@ -111,11 +111,9 @@ button.play-btn{
 
 .list-container{
 width: 60%;
-display: flex;
 justify-content: center;
-flex-direction: column;
 overflow-y: scroll;
-height: 200vh;
+height: 50vh;
 }
 
 .accordion-container{
@@ -126,17 +124,19 @@ height: 200vh;
 
 }
 .champion-btn {
-    background-color: #eee;
+    background-color: rgb(10,11,38);
     color: #444;
     cursor: pointer;
     padding: 18px;
-    border: none;
-    text-align: left;
+    border: solid 1px cornflowerblue;
+    border-radius: 3px;
+    text-align: center;
     outline: none;
     font-size: 15px;
     transition: 0.4s;
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-around; */
+    height: 50px;;
 }
 
 .active, .accordion:hover {
@@ -153,4 +153,28 @@ height: 200vh;
 }
 .splash {
     width: 40%;
+}
+
+.champ-icon, .champ-name, .champ-title, .champ-class, .champ-difficulty{
+    align-self: center;
+    text-align: left;  
+}
+
+.champ-name, .champ-class, .champ-difficulty{
+    width: 7em; 
+    padding-left: 2em;
+}
+
+.champ-title{
+    width: 12em;
+    padding-left: 5em;
+}
+
+.champ-icon{
+    margin: 1em;
+}
+
+.champ-name, .champ-title {
+    justify-content: left;
+    color: white;
 }
