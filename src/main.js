@@ -27,7 +27,7 @@ const drawCard = (champions) => {
     <div class="accordion-container">
         <button class="champion-btn">
         <div class="champ-icon"><img  src=${champions.img}></div>  <h2 class="champ-name">${champions.name}</h2> <h3 class="champ-title">${champions.title}</h3>
-        <div class="champ-class"><img src="./images/assassin-white-png"></div> <div class="champ-difficulty"><img src="https://imgur.com/y1xONJG"></div>
+        <div class="champ-class"><img class="class1" src="./images/assassin-white.png"><img class="class2" src="./images/assassin-white.png"></div><div class="champ-difficulty"><img src="./images/difficulty-medium.png"></div>
         </button>
     </div>`;
 };
