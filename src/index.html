@@ -1,47 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-      <header class="wrapper">
-        
-          <div class="logo-header-container">
-            <img class="logo-header" src="./images/lol-header.png" />
-          </div>
-          <nav>
-            <div class="nav-links">
-              <a href="#">Game</a>
-              <a href="#">Champions</a>
-              <a href="#">Statistics</a>
-              <a href="#">Resources</a>
-            </div>
-            <div class="btn-container">
-              <a class="play-btn" href="https://signup.na.leagueoflegends.com/en/signup/index#/"
-              target="_blank"><button class="play-btn">Play now!</button></a>
-            </div>  
-            
-          </nav>
-      </header>
-      <div class="akali-container">
-        <img src="./images/akali.png" alt="" class="akali-img">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <header class="wrapper">
+
+    <div class="logo-header-container">
+      <img class="logo-header" src="./images/lol-header.png" />
+    </div>
+    <nav>
+      <div class="nav-links">
+        <a href="#">Game</a>
+        <a href="#">Champions</a>
+        <a href="#">Statistics</a>
+        <a href="#">Resources</a>
       </div>
-      <div class="kda-container">
-        <img class="img-kda" src="./images/kda.png" alt="">
+      <div class="btn-container">
+        <a class="play-btn" href="https://signup.na.leagueoflegends.com/en/signup/index#/" target="_blank"><button
+            class="play-btn">Play now!</button></a>
       </div>
-<div class="section-container">
-  <section class="list-container" id="champion-button"> 
-    <!-- <div class="header-list">
-    </div> -->  
-        <!-- <div class="panel">
+
+    </nav>
+  </header>
+  <div class="akali-container">
+    <img src="./images/akali.png" alt="" class="akali-img">
+  </div>
+  <div class="kda-container">
+    <img class="img-kda" src="./images/kda.png" alt="">
+  </div>
+
+  <section class="nav-filter-container">
+    <nav class="nav-filter"><div class="search-container"><input type="search" class="site-search" placeholder="Search..."
+      maxlength="13" aria-label="Search through site content"><i><img src="images/loupe.png" class="loupe"></i></div>
+    
+        <div class="filter-icons">
+          <button class="all-button">All</button>
+          <img class="filter-tank" src="images/tank-dark.png"> 
+          <img class="filter-fighter" src="images/fighter-dark.png">
+          <img class="filter-assassin" src="images/assasssin-dark.png">
+          <img class="filter-mage" src="images/mage-dark.png">
+          <img class="filter-marksman" src="images/marksman-dark.png">
+          <img class="filter-support" src="images/support-dark.png">
+        </div>
+        <div class="difficulty-container">
+          <button class="difficulty-dropdown">Difficulty</button><i><img src="images/arrow-filter.png" class="arrow-filter"></i>
+          <!-- <div>
+            <a href="#about"><img src="images/easy-difficulty.png"></a>
+            <a href="#about"><img src="images/easy-difficulty.png"></a>
+            <a href="#about"><img src="images/easy-difficulty.png"></a>
+          </div> -->
+        </div>
+    </nav>
+  </section>
+
+  <div class="header-list"> 
+    <h2 class="header-table">Champion</h2> 
+    <h2 class="header-table">Title</h2> 
+    <h2 class="header-table">Class</h2>
+    <h2 class="header-table">Difficulty</h2>
+  </div>
+  <div class="section-container">
+    <section class="list-container" id="champion-button">
+
+      <!-- <div class="panel">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div> -->
-      </section>
-    </div>  
-<!--         
+    </section>
+  </div>
+  <!--         
         <button class="champion-btn">
         <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/Akali.png">  <h2>Akali</h2> <h3>the fist of shadow</h3>
         <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/Akali.png"><img src="https://www.masterypoints.com/assets/img/lol/champion_icons/Akali.png"> 
@@ -102,20 +134,11 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div> -->
 
-      </div>
-    </section>
-      <!-- <div class="accordion-container">
-        <div class="block">
-          <div class="champion-btn">
-            caja 1
-          </div> 
-          <div class="content">
-            caja2
-          </div>
-        </div>
-      </div> -->
+  </div>
+  </section>
 
 
-      <script src="main.js" type="module"></script>
-  </body>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
