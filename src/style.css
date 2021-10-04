@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Beaufort-Bold;
+    src: url("fonts/Beaufort-Bold.ttf");
+    font-family: Beaufort-Italic;
+    src: url("fonts/Beaufort-Italic.ttf");
+}
 *{
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -109,6 +115,23 @@ button.play-btn{
 
 .img-kda{
     width: 60%;
+}
+
+.champions-title-container{
+    width: 100%;
+    color: rgb(10,11,38);
+}
+
+h1, .champions-title-container p{
+    text-align: center;
+    font-family: Beaufort-Italic;
+    font-size: 0.9em;
+    margin: 0.5%;
+}
+
+h1 span{
+    font-family: Beaufort-Bold;
+    font-size: 5em;
 }
 
 .header-list{
