@@ -324,6 +324,7 @@ body::-webkit-scrollbar-thumb {
 }
 .champion-btn:hover{
     border: solid 2px cornflowerblue;
+    border-radius: 3px;
 }
 
 .active, .accordion:hover {
@@ -368,22 +369,24 @@ body::-webkit-scrollbar-thumb {
 }
 
 .champ-difficulty img{
-    width: 8em;
+    width: 50%;
+    
 }
 
 .champ-difficulty{
-    width: 25%;
+    width: 30%;
     display:flex;   
     justify-content: end;
 }
 
 .champ-class{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-left: 1em;
-    width: 10%;
+    width: 20%;
 }
 
 .class1, .class2{
     width: 2em;
+    
 }
