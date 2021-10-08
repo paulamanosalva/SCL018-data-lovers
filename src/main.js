@@ -21,8 +21,9 @@ import data from "./data/lol/lol.js";
 
 
 const champions = Object.values(data.data);
-const printChampion = document.getElementById("champion-button");
-const printClass = document.getElementById("filtered-champion-classes");
+//esta tiene que ser let porque va a cambiar lo que imprime c
+let printChampion = document.getElementById("champion-button");
+// const printClass = document.getElementById("filtered-champion-classes");
 
     
 const tankClass = `<div class="champ-class"><img class="class-icon" src="images/tank-white.png"></div>`
@@ -102,12 +103,84 @@ for (let i=0; i < champions.length; i++) {
     printChampion.innerHTML += drawCard(champions[i]);
 }
 
-filterChamps(champions,'Assassin').forEach(e => {
-    //cuando hagamos evento: borrar printchampion en vez de ocultarlo
-    printChampion.classList.add("hide");
-    printClass.innerHTML += drawCard(e);
-    console.log(e);
+const print = (champions) =>{
+    for (let i=0; i < champions.length; i++) {
+        printChampion.innerHTML += drawCard(champions[i]);
+    }
+    
+}
+// document.getElementById("assassin-btn").addEventListener("click", (event) =>{
+//     printChampion.innerHTML = "";
+//     filterChamps(champions,'Assassin').forEach(e => {
+//         //cuando hagamos evento: borrar printchampion en vez de ocultarlo
+
+//         printChampion.innerHTML += drawCard(e);
+//         console.log(e);
+//     })
+
+// })
+
+document.addEventListener("click", (event) => {
+    if (event.target.matches("#assassin-btn")){
+        printChampion.innerHTML = "";
+        filterChamps(champions,"Assassin").forEach(e => {        
+            printChampion.innerHTML += drawCard(e);
+            
+        })
+            
+    }
+    else if (event.target.matches("#tank-btn")){
+        printChampion.innerHTML = "";
+        filterChamps(champions,"Tank").forEach(e => {        
+            printChampion.innerHTML += drawCard(e);
+            
+        })
+    }
+    else if (event.target.matches("#support-btn")){
+        printChampion.innerHTML = "";
+        filterChamps(champions,"Support").forEach(e => {        
+            printChampion.innerHTML += drawCard(e);
+            
+        })
+            
+    }
+    else if (event.target.matches("#mage-btn")){
+        printChampion.innerHTML = "";
+        filterChamps(champions,"Mage").forEach(e => {        
+            printChampion.innerHTML += drawCard(e);
+            
+        })
+            
+    }
+    else if (event.target.matches("#fighter-btn")){
+        printChampion.innerHTML = "";
+        filterChamps(champions,"Fighter").forEach(e => {        
+            printChampion.innerHTML += drawCard(e);
+            
+        })        
+    }
+    else if (event.target.matches("#marksman-btn")){
+        printChampion.innerHTML = "";
+        filterChamps(champions, "Marksman").forEach(e => {
+            printChampion.innerHTML += drawCard(e);
+        })
+    }
+    else if (event.target.matches(".all-button")){
+        printChampion.innerHTML = "";
+        print(champions, "All").forEach(e => {
+            printChampion.innerHTML += drawCard(e);
+        })
+    }
 })
+
+ // console.log(print());
+        // const print  = (champions) => {
+        //     printChampion.innerHTML = "";
+        //     for (let i=0; i < champions.length; i++) {
+        //         printChampion.innerHTML += drawCard(champions[i]);
+        //     }
+        // }
+        // console.log(print());
 
 // printChampion.classList.add("hide");
 
