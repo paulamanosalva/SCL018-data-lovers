@@ -43,11 +43,11 @@
   </div>
 
   <section class="nav-filter-container">
-    <nav class="nav-filter"><div class="search-container"><input type="search" class="site-search" placeholder="Search..."
+    <nav class="nav-filter"><div class="search-container"><input type="search" class="site-search" autocomplete="on" placeholder="Search..."
       maxlength="13" aria-label="Search through site content"><i><img src="images/loupe.png" class="loupe"></i></div>
     
         <div class="filter-icons">
-          <button class="all-button" id="all-btn" value="All" alt="All classes button filter">All</button>
+          <button class="all-button" id="all-btn" value="All" alt="All classes button filter" title="All classes">All</button>
           <img class="filter-tank" src="images/tank-dark.png" value="Tank" id="tank-btn" title="Tank" alt="Tank class button filter">
           <img class="filter-fighter" src="images/fighter-dark.png" value="Fighter" id="fighter-btn" title="Fighter" alt="Fighter class button filter">
           <img class="filter-assassin" src="images/assasssin-dark.png" value="Assassin" id="assassin-btn" title="Assassin" alt="Assassin class button filter">
@@ -55,13 +55,14 @@
           <img class="filter-marksman" src="images/marksman-dark.png" value="Marksman" id="marksman-btn" title="Marksman" alt="Marksman class button filter">
           <img class="filter-support" src="images/support-dark.png" value="Support" id="support-btn" title="Support" alt="Support button class filter">
         </div>
-        <div class="difficulty-container">
-          <button class="difficulty-dropdown">Difficulty</button><i><img src="images/arrow-filter.png" class="arrow-filter"></i>
-          <!-- <div>
-            <a href="#about"><img src="images/easy-difficulty.png"></a>
-            <a href="#about"><img src="images/easy-difficulty.png"></a>
-            <a href="#about"><img src="images/easy-difficulty.png"></a>
-          </div> -->
+
+        <div class="difficulty-container" id="dropdown">
+          <button class="difficulty-dropdown dropdown">Difficulty</button><i><img src="images/arrow-filter.png" class="arrow-filter"></i>
+          <div>
+            <a class="dropdown-content hide" href="#about"><img class="difficulty-option" src="images/easy-difficulty.png"></a>
+            <a class="dropdown-content hide" href="#about"><img class="difficulty-option" src="images/easy-difficulty.png"></a>
+            <a class="dropdown-content hide" href="#about"><img class="difficulty-option" src="images/easy-difficulty.png"></a>
+          </div>
         </div>
     </nav>
   </section>
@@ -79,9 +80,6 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div> -->
     </section>
-<!-- 
-    <section class="list-container" id="filtered-champion-classes">
-    </section> -->
   </div>
 
   <footer>
