@@ -1,8 +1,6 @@
-import { filterChamps } from './data.js'; 
+import { filterClass } from './data.js'; 
 
 import data from "./data/lol/lol.js";
-// import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
 // const showChampion = document.getElementsByClassName("champion-btn");
 // let i;
@@ -21,8 +19,8 @@ import data from "./data/lol/lol.js";
 
 
 const champions = Object.values(data.data);
-//esta tiene que ser let porque va a cambiar lo que imprime c
-let printChampion = document.getElementById("champion-button");
+
+const printChampion = document.getElementById("champion-button");
 // const printClass = document.getElementById("filtered-champion-classes");
 
     
@@ -94,7 +92,6 @@ const drawCard = (champions) => {
                 break;            
         }
 
-
 myHtml += `</button>`
 return myHtml;
 }
@@ -106,24 +103,13 @@ for (let i=0; i < champions.length; i++) {
 const print = (champions) =>{
     for (let i=0; i < champions.length; i++) {
         printChampion.innerHTML += drawCard(champions[i]);
-    }
-    
+    } 
 }
-// document.getElementById("assassin-btn").addEventListener("click", (event) =>{
-//     printChampion.innerHTML = "";
-//     filterChamps(champions,'Assassin').forEach(e => {
-//         //cuando hagamos evento: borrar printchampion en vez de ocultarlo
-
-//         printChampion.innerHTML += drawCard(e);
-//         console.log(e);
-//     })
-
-// })
 
 document.addEventListener("click", (event) => {
     if (event.target.matches("#assassin-btn")){
         printChampion.innerHTML = "";
-        filterChamps(champions,"Assassin").forEach(e => {        
+        filterClass(champions,"Assassin").forEach(e => {        
             printChampion.innerHTML += drawCard(e);
             
         })
@@ -131,14 +117,14 @@ document.addEventListener("click", (event) => {
     }
     else if (event.target.matches("#tank-btn")){
         printChampion.innerHTML = "";
-        filterChamps(champions,"Tank").forEach(e => {        
+        filterClass(champions,"Tank").forEach(e => {        
             printChampion.innerHTML += drawCard(e);
             
         })
     }
     else if (event.target.matches("#support-btn")){
         printChampion.innerHTML = "";
-        filterChamps(champions,"Support").forEach(e => {        
+        filterClass(champions,"Support").forEach(e => {        
             printChampion.innerHTML += drawCard(e);
             
         })
@@ -146,7 +132,7 @@ document.addEventListener("click", (event) => {
     }
     else if (event.target.matches("#mage-btn")){
         printChampion.innerHTML = "";
-        filterChamps(champions,"Mage").forEach(e => {        
+        filterClass(champions,"Mage").forEach(e => {        
             printChampion.innerHTML += drawCard(e);
             
         })
@@ -154,14 +140,14 @@ document.addEventListener("click", (event) => {
     }
     else if (event.target.matches("#fighter-btn")){
         printChampion.innerHTML = "";
-        filterChamps(champions,"Fighter").forEach(e => {        
+        filterClass(champions,"Fighter").forEach(e => {        
             printChampion.innerHTML += drawCard(e);
             
         })        
     }
     else if (event.target.matches("#marksman-btn")){
         printChampion.innerHTML = "";
-        filterChamps(champions, "Marksman").forEach(e => {
+        filterClass(champions, "Marksman").forEach(e => {
             printChampion.innerHTML += drawCard(e);
         })
     }
@@ -171,7 +157,12 @@ document.addEventListener("click", (event) => {
             printChampion.innerHTML += drawCard(e);
         })
     }
+    // else if(event.target.matches("#dropdown")){
+    //     document.getElementsByClassName("dropdown-content").classList.remove("hide");
+    // }
 })
+
+
 
  // console.log(print());
         // const print  = (champions) => {
