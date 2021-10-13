@@ -1,4 +1,4 @@
-import { filterClass } from './data.js';
+import { filterClass, filterDifficulty } from './data.js';
 
 import data from "./data/lol/lol.js";
 // const showChampion = document.getElementsByClassName("champion-btn");
@@ -17,29 +17,6 @@ import data from "./data/lol/lol.js";
 // }
 
 const champions = Object.values(data.data);
-
-const filterDifficulty = (champions) => {
-
-    for (let i = 0; i < champions.length; i++){
-    let champDifficulty = champions[i].info.difficulty;
-
-    let easyArray = []
-    if(champDifficulty > 0 && champDifficulty < 5){
-        easyArray.push(champions[i]);
-    } 
-
-    let mediumArray = []
-    if(champDifficulty > 4 && champDifficulty < 8){
-        mediumArray.push(champions[i]);
-    } 
-
-    let hardArray = []
-    if(champDifficulty > 7 && champDifficulty < 11){
-        hardArray.push(champions[i]);
-        // console.log(hardArray);
-    } 
-    }
-}; 
 filterDifficulty(champions);
 
 const printChampion = document.getElementById("champion-button");
@@ -128,7 +105,9 @@ const print = (champions) =>{
     } 
 }
 
-document.addEventListener("click", (event) => {
+const iconBtns = document.getElementById("icon-btns");
+
+iconBtns.addEventListener("click", (event) => {
     if (event.target.matches("#assassin-btn")){
         printChampion.innerHTML = "";
         filterClass(champions,"Assassin").forEach(e => {        
@@ -179,10 +158,14 @@ document.addEventListener("click", (event) => {
             printChampion.innerHTML += drawCard(e);
         })
     }
-    // else if(event.target.matches("#dropdown")){
-    //     document.getElementsByClassName("dropdown-content").classList.remove("hide");
-    // }
 })
+let difficultyOptions = document.querySelector(".options-container"); 
+let difficultyBtn = document.getElementById("dropdown");
+difficultyBtn.addEventListener("click", ()=>{
+    // difficultyOptions.forEach( (e)=> e.classList.remove("hide"))
+    difficultyOptions.classList.toggle("hide");
+});
+
 
  // console.log(print());
         // const print  = (champions) => {

@@ -46,7 +46,7 @@
     <nav class="nav-filter"><div class="search-container"><input type="search" class="site-search" autocomplete="on" placeholder="Search..."
       maxlength="13" aria-label="Search through site content"><i><img src="images/loupe.png" class="loupe"></i></div>
     
-        <div class="filter-icons">
+        <div class="filter-icons" id="icon-btns">
           <button class="all-button" id="all-btn" value="All" alt="All classes button filter" title="All classes">All</button>
           <img class="filter-tank" src="images/tank-dark.png" value="Tank" id="tank-btn" title="Tank" alt="Tank class button filter">
           <img class="filter-fighter" src="images/fighter-dark.png" value="Fighter" id="fighter-btn" title="Fighter" alt="Fighter class button filter">
@@ -57,14 +57,24 @@
         </div>
 
         <div class="difficulty-container" id="dropdown">
-          <button class="difficulty-dropdown dropdown">Difficulty</button><i><img src="images/arrow-filter.png" class="arrow-filter"></i>
-          <div>
-            <a class="dropdown-content hide" href="#about"><img class="difficulty-option" src="images/easy-difficulty.png"></a>
-            <a class="dropdown-content hide" href="#about"><img class="difficulty-option" src="images/easy-difficulty.png"></a>
-            <a class="dropdown-content hide" href="#about"><img class="difficulty-option" src="images/easy-difficulty.png"></a>
-          </div>
+          <button class="difficulty-dropdown dropdown" >Difficulty<i><img src="images/arrow-filter.png" class="arrow-filter"></i></button>
+          <div class="options-container hide">
+            <button class="dropdown-content" value="easy" ><img class="difficulty-option" src="images/easy-difficulty.png"></button>
+            <button class="dropdown-content" value= "medium"><img class="difficulty-option" src="images/difficulty-medium.png"></button>
+            <button class="dropdown-content" value= "hard" ><img class="difficulty-option" src="images/hard-difficulty.png"></button>
         </div>
+<!-- 
+        <div> 
+          <select name="" id="">
+            <option value="all-difficulties"><h4>Dificulties</h4></option>
+            <option value="easy-difficulty">easy<img class="difficulty-option" src="images/easy-difficulty.png"></option>
+            <option value="medium-difficulty" >medium</option>
+            <option value="hard-difficulty">hard</option>
+          </select>
+        </div> -->
     </nav>
+  
+  </div>
   </section>
 
   <div class="header-list"> 
