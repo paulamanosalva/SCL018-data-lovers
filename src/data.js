@@ -14,31 +14,29 @@ export const filterClass = (champions, champClass) => {
   return filterArray;
 };
 
-// export const filterDifficulty = (champions, champDifficulties => {
-  
-  // let easyArray = []
-  // // let mediumArray = []
-  // // let hardArray = []
+//filtrar(filter) unicamente medium-difficulty
+export const filterDifficulty = (champions) => {
 
-  // for (let i = 0; i<champions.length; i++){
-  //   let champDifficulty = champions[i].info.difficulty;
+    for (let i = 0; i < champions.length; i++){
+    let champDifficulty = champions[i].info.difficulty;
 
-  //   if(champDifficulty > 0 && champDifficulty < 4){
-  //     easyArray.push(champDifficulty);
-  //   } 
+    let easyArray = []
+    if(champDifficulty > 0 && champDifficulty < 5){
+        easyArray.push(champions[i]);
+    } 
 
-    // else if(champions[i].info.difficulty > 3 && champions[i].info.difficulty < 8){
-    //   mediumArray.push(champions[i]);
+    let mediumArray = []
+    if(champDifficulty > 4 && champDifficulty < 8){
+        mediumArray.push(champions[i]);
+    } 
 
-    // } 
-
-    // else if(champions[i].info.difficulty > 7 && champions[i].info.difficulty < 11){
-    //   hardArray.push(champions[i]);
-
-    // } 
-//   }
-// }; 
-
+    let hardArray = []
+    if(champDifficulty > 7 && champDifficulty < 11){
+        hardArray.push(champions[i]);
+        console.log(hardArray);
+    } 
+    } 
+}; 
 
 // export const anotherExample = () => {
 //   return 'OMG';
