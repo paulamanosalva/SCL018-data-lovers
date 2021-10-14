@@ -1,4 +1,4 @@
-import { filterClass, filterDifficulty } from './data.js';
+import { filterClass, filterDifficulty, searchFilter } from './data.js';
 
 import data from "./data/lol/lol.js";
 // const showChampion = document.getElementsByClassName("champion-btn");
@@ -194,21 +194,15 @@ hardDiff.addEventListener("click", ()=>{
     
 });
 
+let championsBySearch = [];
 let searchBar = document.getElementById("search");
+
 searchBar.addEventListener("input", (event)=>{
-    let value = event.target.value;
-    console.log(value);
-})
-
-
- // console.log(print());
-        // const print  = (champions) => {
-        //     printChampion.innerHTML = "";
-        //     for (let i=0; i < champions.length; i++) {
-        //         printChampion.innerHTML += drawCard(champions[i]);
-        //     }
-        // }
-        // console.log(print());
-
-// printChampion.classList.add("hide");
-
+    let inputValue = event.target.value;
+    inputValue = inputValue.toLowerCase();
+    printChampion.innerHTML = "";
+    championsBySearch = searchFilter(champions, inputValue);
+    championsBySearch.forEach((e) =>{
+        printChampion.innerHTML += drawCard(e);
+    })
+});
