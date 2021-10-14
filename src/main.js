@@ -36,7 +36,7 @@ const filterDifficulty = (champions) => {
     let hardArray = []
     if(champDifficulty > 7 && champDifficulty < 11){
         hardArray.push(champions[i]);
-        // console.log(hardArray);
+        console.log(hardArray);
     } 
     }
 }; 
