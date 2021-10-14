@@ -14,32 +14,56 @@ export const filterClass = (champions, champClass) => {
   return filterArray;
 };
 
-// export const filterDifficulty = (champions, champDifficulties => {
-  
-  // let easyArray = []
-  // // let mediumArray = []
-  // // let hardArray = []
+//filtrar(filter) unicamente medium-difficulty
+export const filterDifficulty = (champions, champDifficulty) => {
+  const tempArray = [];
 
-  // for (let i = 0; i<champions.length; i++){
-  //   let champDifficulty = champions[i].info.difficulty;
+  champions.forEach((e)=>{
+    if(champDifficulty === 1){
+      if(e.info.difficulty < 5){
+        tempArray.push(e);
+      }
+    }
+    else if(champDifficulty === 2){
+      if(e.info.difficulty > 4 && e.info.difficulty < 8 ){
+        tempArray.push(e);
+      }
+    }
+    else if(champDifficulty === 3){
+      if(e.info.difficulty > 7){
+        tempArray.push(e);
+      }
+    }
+  });
+  // console.log(tempArray);
+  return tempArray
+};
 
-  //   if(champDifficulty > 0 && champDifficulty < 4){
-  //     easyArray.push(champDifficulty);
+
+
+
+  //   for (let i = 0; i < champions.length; i++){
+  //   let filterArray = [];
+  //   let dataDifficulty = champions[i].info.difficulty;
+  //   // console.log(dataDifficulty);
+  //   // console.log(typeof dataDifficulty);
+    
+  //   if(champDifficulty === 1){
+  //     // champions.filter(dataDifficulty => dataDifficulty < 5)
+  //     console.log(dataDifficulty => dataDifficulty < 5)
   //   } 
 
-    // else if(champions[i].info.difficulty > 3 && champions[i].info.difficulty < 8){
-    //   mediumArray.push(champions[i]);
+  //   else if(champDifficulty === 2){
+  //     if(dataDifficulty >5 && dataDifficulty <8){
+  //       filterArray.push(champions[i]);
+  //       console.log(filterArray);
+  //     } 
+  //   } 
 
-    // } 
+  //   else if(champDifficulty == 3){
+  //     if(dataDifficulty >7  && dataDifficulty <11){
+  //       filterArray.push(champions[i]);
+  //     }
+  //   } 
+  // }
 
-    // else if(champions[i].info.difficulty > 7 && champions[i].info.difficulty < 11){
-    //   hardArray.push(champions[i]);
-
-    // } 
-//   }
-// }; 
-
-
-// export const anotherExample = () => {
-//   return 'OMG';
-// };

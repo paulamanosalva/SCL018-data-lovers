@@ -1,4 +1,4 @@
-import { filterClass } from './data.js';
+import { filterClass, filterDifficulty } from './data.js';
 
 import data from "./data/lol/lol.js";
 // const showChampion = document.getElementsByClassName("champion-btn");
@@ -17,35 +17,11 @@ import data from "./data/lol/lol.js";
 // }
 
 const champions = Object.values(data.data);
-
-const filterDifficulty = (champions) => {
-
-    for (let i = 0; i < champions.length; i++){
-    let champDifficulty = champions[i].info.difficulty;
-
-    let easyArray = []
-    if(champDifficulty > 0 && champDifficulty < 5){
-        easyArray.push(champions[i]);
-    } 
-
-    let mediumArray = []
-    if(champDifficulty > 4 && champDifficulty < 8){
-        mediumArray.push(champions[i]);
-    } 
-
-    let hardArray = []
-    if(champDifficulty > 7 && champDifficulty < 11){
-        hardArray.push(champions[i]);
-        console.log(hardArray);
-    } 
-    }
-}; 
-filterDifficulty(champions);
+// filterDifficulty(champions);
 
 const printChampion = document.getElementById("champion-button");
 // const printClass = document.getElementById("filtered-champion-classes");
 
-    
 const tankClass = `<div class="champ-class"><img class="class-icon" src="images/tank-white.png"></div>`
 const fighterClass = `<div class="champ-class"><img class="class-icon" src="images/fighter-white.png"></div>`
 const assassinClass = `<div class="champ-class"><img class="class-icon" src="images/assassin-white.png"></div>`
@@ -113,22 +89,20 @@ const drawCard = (champions) => {
                 myHtml += hardDifficulty;
                 break;            
         }
-
 myHtml += `</button>`
 return myHtml;
 }
-
-for (let i=0; i < champions.length; i++) {
-    printChampion.innerHTML += drawCard(champions[i]);
-}
-
 const print = (champions) =>{
     for (let i=0; i < champions.length; i++) {
         printChampion.innerHTML += drawCard(champions[i]);
     } 
 }
 
-document.addEventListener("click", (event) => {
+print(champions);
+
+const iconBtns = document.getElementById("icon-btns");
+
+iconBtns.addEventListener("click", (event) => {
     if (event.target.matches("#assassin-btn")){
         printChampion.innerHTML = "";
         filterClass(champions,"Assassin").forEach(e => {        
@@ -175,14 +149,57 @@ document.addEventListener("click", (event) => {
     }
     else if (event.target.matches(".all-button")){
         printChampion.innerHTML = "";
-        print(champions, "All").forEach(e => {
-            printChampion.innerHTML += drawCard(e);
-        })
+        print(champions);
     }
-    // else if(event.target.matches("#dropdown")){
-    //     document.getElementsByClassName("dropdown-content").classList.remove("hide");
-    // }
+});
+
+let difficultyContainer = document.querySelector(".options-container"); 
+let difficultyBtn = document.getElementById("dropdown");
+difficultyBtn.addEventListener("click", ()=>{
+    // difficultyOptions.forEach( (e)=> e.classList.remove("hide"))
+    difficultyContainer.classList.toggle("hide");
+});
+
+let champDifficulty;
+let easyDiff = document.getElementById("d1");
+let mediumDiff = document.getElementById("d2");
+let hardDiff = document.getElementById("d3");
+let filterChampsByDifficulty = [];
+
+easyDiff.addEventListener("click", ()=>{
+    champDifficulty = 1;
+    printChampion.innerHTML = "";
+    filterChampsByDifficulty = filterDifficulty(champions, champDifficulty)
+    filterChampsByDifficulty.forEach((e) =>{
+        printChampion.innerHTML += drawCard(e);
+    })
+});
+
+mediumDiff.addEventListener("click", ()=>{
+    champDifficulty = 2;
+    printChampion.innerHTML = "";
+    filterChampsByDifficulty = filterDifficulty(champions, champDifficulty)
+    filterChampsByDifficulty.forEach((e) =>{
+        printChampion.innerHTML += drawCard(e);
+    })
+    
+});
+hardDiff.addEventListener("click", ()=>{
+    champDifficulty = 3;
+    printChampion.innerHTML = "";
+    filterChampsByDifficulty = filterDifficulty(champions, champDifficulty)
+    filterChampsByDifficulty.forEach((e) =>{
+        printChampion.innerHTML += drawCard(e);
+    })
+    
+});
+
+let searchBar = document.getElementById("search");
+searchBar.addEventListener("input", (event)=>{
+    let value = event.target.value;
+    console.log(value);
 })
+
 
  // console.log(print());
         // const print  = (champions) => {
@@ -195,8 +212,3 @@ document.addEventListener("click", (event) => {
 
 // printChampion.classList.add("hide");
 
-
-// directorOption.addEventListener("change", (event) => {
-//     console.log(event.target.value);
-//     const chosenDirector = filterData(data, event.target.value);   
-//     printCard.classList.add("hide");
