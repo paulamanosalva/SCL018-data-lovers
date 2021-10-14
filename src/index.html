@@ -43,7 +43,7 @@
   </div>
 
   <section class="nav-filter-container">
-    <nav class="nav-filter"><div class="search-container"><input type="search" class="site-search" autocomplete="on" placeholder="Search..."
+    <nav class="nav-filter"><div class="search-container"><input id="search" type="search" class="site-search" autocomplete="on" placeholder="Search..."
       maxlength="13" aria-label="Search through site content"><i><img src="images/loupe.png" class="loupe"></i></div>
     
         <div class="filter-icons" id="icon-btns">
@@ -56,15 +56,16 @@
           <img class="filter-support" src="images/support-dark.png" value="Support" id="support-btn" title="Support" alt="Support button class filter">
         </div>
 
+      
         <div class="difficulty-container" id="dropdown">
           <button class="difficulty-dropdown dropdown" >Difficulty<i><img src="images/arrow-filter.png" class="arrow-filter"></i></button>
           <div class="options-container hide">
-            <button class="dropdown-content" value="easy" ><img class="difficulty-option" src="images/easy-difficulty.png"></button>
-            <button class="dropdown-content" value= "medium"><img class="difficulty-option" src="images/difficulty-medium.png"></button>
-            <button class="dropdown-content" value= "hard" ><img class="difficulty-option" src="images/hard-difficulty.png"></button>
-        </div>
-<!-- 
-        <div> 
+            <button class="dropdown-btn" id="d1" value= "1" ><img class="difficulty-option" src="images/easy-difficulty.png"></button>
+            <button class="dropdown-btn" id="d2" value= "2"><img class="difficulty-option" src="images/difficulty-medium.png"></button>
+            <button class="dropdown-btn" id="d3" value= "3" ><img class="difficulty-option" src="images/hard-difficulty.png"></button>
+          </div>
+      </div>
+        <!-- <div> 
           <select name="" id="">
             <option value="all-difficulties"><h4>Dificulties</h4></option>
             <option value="easy-difficulty">easy<img class="difficulty-option" src="images/easy-difficulty.png"></option>

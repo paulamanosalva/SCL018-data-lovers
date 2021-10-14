@@ -17,12 +17,11 @@ import data from "./data/lol/lol.js";
 // }
 
 const champions = Object.values(data.data);
-filterDifficulty(champions);
+// filterDifficulty(champions);
 
 const printChampion = document.getElementById("champion-button");
 // const printClass = document.getElementById("filtered-champion-classes");
 
-    
 const tankClass = `<div class="champ-class"><img class="class-icon" src="images/tank-white.png"></div>`
 const fighterClass = `<div class="champ-class"><img class="class-icon" src="images/fighter-white.png"></div>`
 const assassinClass = `<div class="champ-class"><img class="class-icon" src="images/assassin-white.png"></div>`
@@ -90,20 +89,16 @@ const drawCard = (champions) => {
                 myHtml += hardDifficulty;
                 break;            
         }
-
 myHtml += `</button>`
 return myHtml;
 }
-
-for (let i=0; i < champions.length; i++) {
-    printChampion.innerHTML += drawCard(champions[i]);
-}
-
 const print = (champions) =>{
     for (let i=0; i < champions.length; i++) {
         printChampion.innerHTML += drawCard(champions[i]);
     } 
 }
+
+print(champions);
 
 const iconBtns = document.getElementById("icon-btns");
 
@@ -154,17 +149,56 @@ iconBtns.addEventListener("click", (event) => {
     }
     else if (event.target.matches(".all-button")){
         printChampion.innerHTML = "";
-        print(champions, "All").forEach(e => {
-            printChampion.innerHTML += drawCard(e);
-        })
+        print(champions);
     }
-})
-let difficultyOptions = document.querySelector(".options-container"); 
+});
+
+let difficultyContainer = document.querySelector(".options-container"); 
 let difficultyBtn = document.getElementById("dropdown");
 difficultyBtn.addEventListener("click", ()=>{
     // difficultyOptions.forEach( (e)=> e.classList.remove("hide"))
-    difficultyOptions.classList.toggle("hide");
+    difficultyContainer.classList.toggle("hide");
 });
+
+let champDifficulty;
+let easyDiff = document.getElementById("d1");
+let mediumDiff = document.getElementById("d2");
+let hardDiff = document.getElementById("d3");
+let filterChampsByDifficulty = [];
+
+easyDiff.addEventListener("click", ()=>{
+    champDifficulty = 1;
+    printChampion.innerHTML = "";
+    filterChampsByDifficulty = filterDifficulty(champions, champDifficulty)
+    filterChampsByDifficulty.forEach((e) =>{
+        printChampion.innerHTML += drawCard(e);
+    })
+});
+
+mediumDiff.addEventListener("click", ()=>{
+    champDifficulty = 2;
+    printChampion.innerHTML = "";
+    filterChampsByDifficulty = filterDifficulty(champions, champDifficulty)
+    filterChampsByDifficulty.forEach((e) =>{
+        printChampion.innerHTML += drawCard(e);
+    })
+    
+});
+hardDiff.addEventListener("click", ()=>{
+    champDifficulty = 3;
+    printChampion.innerHTML = "";
+    filterChampsByDifficulty = filterDifficulty(champions, champDifficulty)
+    filterChampsByDifficulty.forEach((e) =>{
+        printChampion.innerHTML += drawCard(e);
+    })
+    
+});
+
+let searchBar = document.getElementById("search");
+searchBar.addEventListener("input", (event)=>{
+    let value = event.target.value;
+    console.log(value);
+})
 
 
  // console.log(print());
@@ -178,8 +212,3 @@ difficultyBtn.addEventListener("click", ()=>{
 
 // printChampion.classList.add("hide");
 
-
-// directorOption.addEventListener("change", (event) => {
-//     console.log(event.target.value);
-//     const chosenDirector = filterData(data, event.target.value);   
-//     printCard.classList.add("hide");
