@@ -359,6 +359,7 @@ body::-webkit-scrollbar-thumb {
 
 .blurb-container p{
     font-size: 0.8rem;
+    font-family: Beaufort-Italic;
 }
 
 .splash {

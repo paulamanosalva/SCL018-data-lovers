@@ -34,7 +34,26 @@ const easyDifficulty = `<div class="champ-difficulty"><img src="images/easy-diff
 const mediumDifficulty = `<div class="champ-difficulty"><img class="champ-difficulty" src="images/difficulty-medium.png"></div>`
 const hardDifficulty = `<div class="champ-difficulty"><img src="images/hard-difficulty.png"></div>`
 
-
+// let panel =  `<div class="panel">
+// <div class="splash-container"><img class="splash"
+//     src=${champions.splash}></div>
+// <div class="blurb-container">
+//     <p>${champions.blurb}
+//     </p>
+// </div>
+// <ul class="stats">
+//     <li class="stats-li">Hp:${champions.stats.hp}</li>
+//     <li class="stats-li">Hp regen:${champions.stats.hpregen}</li>
+//     <li class="stats-li">Mp:${champions.stats.mp}</li>
+//     <li class="stats-li">Armor:${champions.stats.armor}</li>
+// </ul>
+// <ul class="stats">
+//     <li class="stats-li">Spellblock:${champions.stats.spellblock}</li>
+//     <li class="stats-li">Attack range:${champions.stats.attackrange}</li>
+//     <li class="stats-li">AD:${champions.stats.attackdamage}</li>
+//     <li class="stats-li">Movespeed:${champions.stats.movespeed}</li>
+// </ul>
+// </div>`
 // console.log(champions);
 
 // console.log(filterChamps(champions, clase));
@@ -42,6 +61,7 @@ const hardDifficulty = `<div class="champ-difficulty"><img src="images/hard-diff
 const drawCard = (champions) => {
 
     let myHtml = ``
+    let panel = ``
 
         myHtml += `<div class="accordion-container">
         <button class="champion-btn">
@@ -90,6 +110,29 @@ const drawCard = (champions) => {
                 break;            
         }
 myHtml += `</button>`
+
+panel =  `<div class="panel hide">
+<div class="splash-container"><img class="splash"
+    src=${champions.splash}></div>
+<div class="blurb-container">
+    <p>${champions.blurb}
+    </p>
+</div>
+<ul class="stats">
+    <li class="stats-li">Hp:${champions.stats.hp}</li>
+    <li class="stats-li">Hp regen:${champions.stats.hpregen}</li>
+    <li class="stats-li">Mp:${champions.stats.mp}</li>
+    <li class="stats-li">Armor:${champions.stats.armor}</li>
+</ul>
+<ul class="stats">
+    <li class="stats-li">Spellblock:${champions.stats.spellblock}</li>
+    <li class="stats-li">Attack range:${champions.stats.attackrange}</li>
+    <li class="stats-li">AD:${champions.stats.attackdamage}</li>
+    <li class="stats-li">Movespeed:${champions.stats.movespeed}</li>
+</ul>
+</div>`
+
+        myHtml += panel
 return myHtml;
 }
 const print = (champions) =>{
@@ -206,3 +249,49 @@ searchBar.addEventListener("input", (event)=>{
         printChampion.innerHTML += drawCard(e);
     })
 });
+
+const champPanel = document.querySelectorAll(".panel");
+const champBtn = document.querySelectorAll(".champion-btn");
+const accordionContainer = document.querySelectorAll(".accordion-container");
+// champBtn.forEach((e) => {
+//     e.addEventListener("click", () =>{
+//         champPanel.forEach((e)=> e.classList.toggle("hide"))});
+// });
+
+//GALLINA ROTA PERO CAMINA
+// accordionContainer.forEach((e) => {
+//     // console.log(e)
+//     e.addEventListener("click", (event) =>{
+//         if(event.target){
+//             event.target.nextElementSibling.classList.toggle("hide");
+//             console.log(event.target)
+//         }
+//         });
+//         });
+
+        accordionContainer.forEach((e) => {
+            // console.log(e)
+            e.addEventListener("click", (event) =>{
+                console.log(event.target.tagName)
+                if(event.target.tagName === "BUTTON"){
+                    event.target.nextElementSibling.classList.toggle("hide"); 
+                }
+                });
+                });
+        
+// accordionContainer.addEventListener("click", (event) =>{
+//     if(event.target.matches(".champion-btn")) {
+//         console.log(event.target)
+//         event.target.nextSibling.forEach((e) => e.classList.toggle("hide")
+//     )}
+// })
+
+
+// champBtn.forEach((e) => {
+//     // console.log(e);
+//     e.addEventListener("click", () =>{
+//     if(e.target && e.target.tagName === "button"){
+//         event.target.nextSibling.classList.toggle("hide");
+//     }
+// });
+// });
