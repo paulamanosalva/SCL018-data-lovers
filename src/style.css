@@ -239,11 +239,22 @@ select{
     display: flex;
     margin-right: 2%;
     flex-direction: column;
-    /* justify-content: center; */
-    position: relative;
+    justify-content: center;
+    /* position: relative; */
 } 
+
+.difficulty-dropdown{
+    /* position: absolute; */
+    position: relative;
+}
 .options-container{
-    width: 100%;
+    width: 9%;
+    left: 74.5%;
+    top: 185%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end; */
+    position: absolute; 
 }
 
 .difficulty-dropdown, .difficulty-option{
