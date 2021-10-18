@@ -17,18 +17,18 @@ const emptyClass = `<div class="empty-class"><img class="fake-icon" src="images/
 const easyDifficulty = `<div class="champ-difficulty"><img src="images/easy-difficulty.png"></div>`
 const mediumDifficulty = `<div class="champ-difficulty"><img class="champ-difficulty" src="images/difficulty-medium.png"></div>`
 const hardDifficulty = `<div class="champ-difficulty"><img src="images/hard-difficulty.png"></div>`
-const champBtn = document.querySelectorAll(".champion-btn");
-const accordionContainer = document.querySelectorAll(".accordion-container");
+// const champBtn = document.querySelectorAll(".champion-btn");
+// const accordionContainer = document.querySelectorAll(".accordion-container");
 
-const showPanel = () =>{
-    accordionContainer.forEach((e) => {
-        // console.log(e)
-    e.addEventListener("click", (event) =>{
-    console.log(event.target.closest(".accordion-container").querySelector(".panel"))
-    event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
-});
-});
-}
+// const showPanel = () =>{
+//     accordionContainer.forEach((e) => {
+//         // console.log(e)
+//     e.addEventListener("click", (event) =>{
+//     console.log(event.target.closest(".accordion-container").querySelector(".panel"))
+//     event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
+// });
+// });
+// }
 
 const drawCard = (champions) => {
 
@@ -103,17 +103,6 @@ panel =  `<div class="panel hide">
     <li class="stats-li">Movespeed:${champions.stats.movespeed}</li>
 </ul>
 </div>`
-
-const champBtn = document.querySelectorAll(".champion-btn");
-const accordionContainer = document.querySelectorAll(".accordion-container");
-
-accordionContainer.forEach((e) => {
-    // console.log(e)
-e.addEventListener("click", (event) =>{
-console.log(event.target.closest(".accordion-container").querySelector(".panel"))
-event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
-});
-});
         myHtml += panel
 return myHtml;
 }
@@ -126,6 +115,17 @@ const print = (champions) =>{
 
 print(champions);
 
+// const champBtn = document.querySelectorAll(".champion-btn");
+const accordionContainer = document.querySelectorAll(".accordion-container");
+
+accordionContainer.forEach((e) => {
+    // console.log(e)
+    e.addEventListener("click", (event) =>{
+    // console.log(event.target.closest(".accordion-container").querySelector(".panel"));
+    event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
+    });
+});
+
 const iconBtns = document.getElementById("icon-btns");
 
 iconBtns.addEventListener("click", (event) => {
@@ -134,6 +134,7 @@ iconBtns.addEventListener("click", (event) => {
         filterClass(champions,"Assassin").forEach(e => {        
             printChampion.innerHTML += drawCard(e);
         })
+        
             
     }
     else if (event.target.matches("#tank-btn")){
