@@ -104,8 +104,11 @@ panel =  `<div class="panel hide">
 </ul>
 </div>`
         myHtml += panel
+        
 return myHtml;
 }
+
+
 
 const print = (champions) =>{
     for (let i=0; i < champions.length; i++) {
@@ -115,20 +118,21 @@ const print = (champions) =>{
 
 print(champions);
 
-// const champBtn = document.querySelectorAll(".champion-btn");
+
 const accordionContainer = document.querySelectorAll(".accordion-container");
 
 accordionContainer.forEach((e) => {
     // console.log(e)
-    e.addEventListener("click", (event) =>{
-    // console.log(event.target.closest(".accordion-container").querySelector(".panel"));
-    event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
-    });
+e.addEventListener("click", (event) =>{
+console.log(event.target.closest(".accordion-container").querySelector(".panel"))
+event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
+});
 });
 
 const iconBtns = document.getElementById("icon-btns");
 
 iconBtns.addEventListener("click", (event) => {
+   
     if (event.target.matches("#assassin-btn")){
         printChampion.innerHTML = "";
         filterClass(champions,"Assassin").forEach(e => {        
@@ -198,6 +202,7 @@ easyDiff.addEventListener("click", ()=>{
     filterChampsByDifficulty = filterDifficulty(champions, champDifficulty)
     filterChampsByDifficulty.forEach((e) =>{
         printChampion.innerHTML += drawCard(e);
+        
     })
 });
 
@@ -207,6 +212,7 @@ mediumDiff.addEventListener("click", ()=>{
     filterChampsByDifficulty = filterDifficulty(champions, champDifficulty)
     filterChampsByDifficulty.forEach((e) =>{
         printChampion.innerHTML += drawCard(e);
+       
     })
     
 });
@@ -216,6 +222,7 @@ hardDiff.addEventListener("click", ()=>{
     filterChampsByDifficulty = filterDifficulty(champions, champDifficulty)
     filterChampsByDifficulty.forEach((e) =>{
         printChampion.innerHTML += drawCard(e);
+        
     })
     
 });
@@ -230,6 +237,7 @@ searchBar.addEventListener("input", (event)=>{
     championsBySearch = searchFilter(champions, inputValue);
     championsBySearch.forEach((e) =>{
         printChampion.innerHTML += drawCard(e);
+        
     })
 });
 
