@@ -28,7 +28,7 @@ export const filterDifficulty = (champions, champDifficulty) => {
         tempArray.push(e);
       }
     }
-    else if(champDifficulty === 3){
+    else {
       if(e.info.difficulty > 7){
         tempArray.push(e);
       }

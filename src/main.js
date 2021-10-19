@@ -124,7 +124,7 @@ const accordionContainer = document.querySelectorAll(".accordion-container");
 accordionContainer.forEach((e) => {
     // console.log(e)
 e.addEventListener("click", (event) =>{
-console.log(event.target.closest(".accordion-container").querySelector(".panel"))
+// console.log(event.target.closest(".accordion-container").querySelector(".panel"))
 event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
 });
 });
@@ -132,7 +132,7 @@ event.target.closest(".accordion-container").querySelector(".panel").classList.t
 const iconBtns = document.getElementById("icon-btns");
 
 iconBtns.addEventListener("click", (event) => {
-   
+
     if (event.target.matches("#assassin-btn")){
         printChampion.innerHTML = "";
         filterClass(champions,"Assassin").forEach(e => {        
@@ -201,8 +201,7 @@ easyDiff.addEventListener("click", ()=>{
     printChampion.innerHTML = "";
     filterChampsByDifficulty = filterDifficulty(champions, champDifficulty)
     filterChampsByDifficulty.forEach((e) =>{
-        printChampion.innerHTML += drawCard(e);
-        
+        printChampion.innerHTML += drawCard(e);  
     })
 });
 
@@ -212,7 +211,6 @@ mediumDiff.addEventListener("click", ()=>{
     filterChampsByDifficulty = filterDifficulty(champions, champDifficulty)
     filterChampsByDifficulty.forEach((e) =>{
         printChampion.innerHTML += drawCard(e);
-       
     })
     
 });
