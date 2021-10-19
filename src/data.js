@@ -14,7 +14,7 @@ export const filterClass = (champions, champClass) => {
   return filterArray;
 };
 
-//filtrar(filter) unicamente medium-difficulty
+
 export const filterDifficulty = (champions, champDifficulty) => {
   const tempArray = [];
 

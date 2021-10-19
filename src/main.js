@@ -17,18 +17,8 @@ const emptyClass = `<div class="empty-class"><img class="fake-icon" src="images/
 const easyDifficulty = `<div class="champ-difficulty"><img src="images/easy-difficulty.png"></div>`
 const mediumDifficulty = `<div class="champ-difficulty"><img class="champ-difficulty" src="images/difficulty-medium.png"></div>`
 const hardDifficulty = `<div class="champ-difficulty"><img src="images/hard-difficulty.png"></div>`
-const champBtn = document.querySelectorAll(".champion-btn");
-const accordionContainer = document.querySelectorAll(".accordion-container");
 
-const showPanel = () =>{
-    accordionContainer.forEach((e) => {
-        // console.log(e)
-    e.addEventListener("click", (event) =>{
-    console.log(event.target.closest(".accordion-container").querySelector(".panel"))
-    event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
-});
-});
-}
+
 
 const drawCard = (champions) => {
 
@@ -104,31 +94,39 @@ panel =  `<div class="panel hide">
 </ul>
 </div>`
 
-const champBtn = document.querySelectorAll(".champion-btn");
-const accordionContainer = document.querySelectorAll(".accordion-container");
 
-accordionContainer.forEach((e) => {
-    // console.log(e)
-e.addEventListener("click", (event) =>{
-console.log(event.target.closest(".accordion-container").querySelector(".panel"))
-event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
-});
-});
         myHtml += panel
+        
 return myHtml;
+}
+const showPanel = () =>{
+    const champBtn = document.querySelectorAll(".champion-btn");
+    const accordionContainer = document.querySelectorAll(".accordion-container");
+    accordionContainer.forEach((e) => {
+        // console.log(e)
+    e.addEventListener("click", (event) =>{
+    console.log(event.target.closest(".accordion-container").querySelector(".panel"))
+    event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
+});
+});
 }
 
 const print = (champions) =>{
     for (let i=0; i < champions.length; i++) {
         printChampion.innerHTML += drawCard(champions[i]);
     } 
+    showPanel();
 }
 
 print(champions);
 
+
+
+
 const iconBtns = document.getElementById("icon-btns");
 
 iconBtns.addEventListener("click", (event) => {
+    showPanel();
     if (event.target.matches("#assassin-btn")){
         printChampion.innerHTML = "";
         filterClass(champions,"Assassin").forEach(e => {        
@@ -197,6 +195,7 @@ easyDiff.addEventListener("click", ()=>{
     filterChampsByDifficulty = filterDifficulty(champions, champDifficulty)
     filterChampsByDifficulty.forEach((e) =>{
         printChampion.innerHTML += drawCard(e);
+        showPanel();
     })
 });
 
@@ -206,6 +205,7 @@ mediumDiff.addEventListener("click", ()=>{
     filterChampsByDifficulty = filterDifficulty(champions, champDifficulty)
     filterChampsByDifficulty.forEach((e) =>{
         printChampion.innerHTML += drawCard(e);
+        showPanel();
     })
     
 });
@@ -215,6 +215,7 @@ hardDiff.addEventListener("click", ()=>{
     filterChampsByDifficulty = filterDifficulty(champions, champDifficulty)
     filterChampsByDifficulty.forEach((e) =>{
         printChampion.innerHTML += drawCard(e);
+        showPanel();
     })
     
 });
@@ -229,6 +230,7 @@ searchBar.addEventListener("input", (event)=>{
     championsBySearch = searchFilter(champions, inputValue);
     championsBySearch.forEach((e) =>{
         printChampion.innerHTML += drawCard(e);
+        showPanel();
     })
 });
 
