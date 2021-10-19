@@ -17,8 +17,23 @@ const emptyClass = `<div class="empty-class"><img class="fake-icon" src="images/
 const easyDifficulty = `<div class="champ-difficulty"><img src="images/easy-difficulty.png"></div>`
 const mediumDifficulty = `<div class="champ-difficulty"><img class="champ-difficulty" src="images/difficulty-medium.png"></div>`
 const hardDifficulty = `<div class="champ-difficulty"><img src="images/hard-difficulty.png"></div>`
+<<<<<<< HEAD
 
 
+=======
+// const champBtn = document.querySelectorAll(".champion-btn");
+// const accordionContainer = document.querySelectorAll(".accordion-container");
+
+// const showPanel = () =>{
+//     accordionContainer.forEach((e) => {
+//         // console.log(e)
+//     e.addEventListener("click", (event) =>{
+//     console.log(event.target.closest(".accordion-container").querySelector(".panel"))
+//     event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
+// });
+// });
+// }
+>>>>>>> 0c95ff52968025df12cc98b3c670173a986ca2f0
 
 const drawCard = (champions) => {
 
@@ -93,8 +108,11 @@ panel =  `<div class="panel hide">
     <li class="stats-li">Movespeed:${champions.stats.movespeed}</li>
 </ul>
 </div>`
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 0c95ff52968025df12cc98b3c670173a986ca2f0
         myHtml += panel
         
 return myHtml;
@@ -120,8 +138,21 @@ const print = (champions) =>{
 
 print(champions);
 
+<<<<<<< HEAD
 
 
+=======
+// const champBtn = document.querySelectorAll(".champion-btn");
+const accordionContainer = document.querySelectorAll(".accordion-container");
+
+accordionContainer.forEach((e) => {
+    // console.log(e)
+    e.addEventListener("click", (event) =>{
+    // console.log(event.target.closest(".accordion-container").querySelector(".panel"));
+    event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
+    });
+});
+>>>>>>> 0c95ff52968025df12cc98b3c670173a986ca2f0
 
 const iconBtns = document.getElementById("icon-btns");
 
@@ -132,6 +163,7 @@ iconBtns.addEventListener("click", (event) => {
         filterClass(champions,"Assassin").forEach(e => {        
             printChampion.innerHTML += drawCard(e);
         })
+        
             
     }
     else if (event.target.matches("#tank-btn")){

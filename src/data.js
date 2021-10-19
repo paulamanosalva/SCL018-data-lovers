@@ -14,7 +14,10 @@ export const filterClass = (champions, champClass) => {
   return filterArray;
 };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0c95ff52968025df12cc98b3c670173a986ca2f0
 export const filterDifficulty = (champions, champDifficulty) => {
   const tempArray = [];
 
