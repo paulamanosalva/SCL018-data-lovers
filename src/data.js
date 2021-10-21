@@ -1,8 +1,3 @@
-// estas funciones son de ejemplo
-
-// export const filterChamps = (champions, clase) => {
-//   return champions.filter(champions.tags.includes(clase));
-// // };
 
 export const filterClass = (champions, champClass) => {
   let filterArray = []

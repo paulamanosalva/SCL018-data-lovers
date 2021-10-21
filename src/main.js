@@ -186,7 +186,6 @@ iconBtns.addEventListener("click", (event) => {
 let difficultyContainer = document.querySelector(".options-container"); 
 let difficultyBtn = document.getElementById("dropdown");
 difficultyBtn.addEventListener("click", ()=>{
-    // difficultyOptions.forEach( (e)=> e.classList.remove("hide"))
     difficultyContainer.classList.toggle("hide");
 });
 
@@ -239,28 +238,15 @@ searchBar.addEventListener("input", (event)=>{
     })
 });
 
-let toggleMenu = document.querySelector(".toggle-menu");
-let iconsImgs = document.querySelector(".icons-imgs");
-toggleMenu.addEventListener("click", ()=>{
-    iconsImgs.classList.toggle("active")
-})
+// let toggleMenu = document.querySelector(".toggle-menu");
+// let iconsImgs = document.querySelector(".icons-imgs");
+// toggleMenu.addEventListener("click", ()=>{
+//     navLinks.classList.toggle("active")
+// })
 
-// accordionContainer.forEach((e) => {
-//     // console.log(e)
-//     e.addEventListener("click", (event) =>{
-//     console.log(event.target.closest(".accordion-container").querySelector(".panel"))
-//     event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
-// });
-// });
+// let classesBtn = document.querySelector(".all-classes-btn");
 
-// accordionContainer.forEach((e) => {
-//     // console.log(e)
-//     e.addEventListener("click", (event) =>{
-// console.log(event.target.closest(".accordion-container").querySelector(".panel"))
-//     event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
-// });
-// });
-// const champPanel = document.querySelectorAll(".panel");
-
-
-
+// console.log(iconsImgs)
+// classesBtn.addEventListener("click", ()=>{
+//     iconsImgs.classList.toggle("active")
+// })
