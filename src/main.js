@@ -186,7 +186,6 @@ iconBtns.addEventListener("click", (event) => {
 let difficultyContainer = document.querySelector(".options-container"); 
 let difficultyBtn = document.getElementById("dropdown");
 difficultyBtn.addEventListener("click", ()=>{
-    // difficultyOptions.forEach( (e)=> e.classList.remove("hide"))
     difficultyContainer.classList.toggle("hide");
 });
 
@@ -251,23 +250,3 @@ console.log(iconsImgs)
 classesBtn.addEventListener("click", ()=>{
     iconsImgs.classList.toggle("active")
 })
-
-// accordionContainer.forEach((e) => {
-//     // console.log(e)
-//     e.addEventListener("click", (event) =>{
-//     console.log(event.target.closest(".accordion-container").querySelector(".panel"))
-//     event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
-// });
-// });
-
-// accordionContainer.forEach((e) => {
-//     // console.log(e)
-//     e.addEventListener("click", (event) =>{
-// console.log(event.target.closest(".accordion-container").querySelector(".panel"))
-//     event.target.closest(".accordion-container").querySelector(".panel").classList.toggle("hide");  
-// });
-// });
-// const champPanel = document.querySelectorAll(".panel");
-
-
-
