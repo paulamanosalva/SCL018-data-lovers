@@ -12,22 +12,28 @@
   <div id="root"></div>
   <header class="wrapper">
 
+<div class="toggle-menu"> 
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span></div>
+      
     <div class="logo-header-container">
       <img class="logo-header" src="./images/lol-header.png" />
     </div>
-    <nav>
+    <nav class="nav-links-container">
+              
       <div class="nav-links">
         <a href="#">Game</a>
         <a href="#">Champions</a>
         <a href="#">Statistics</a>
         <a href="#">Resources</a>
       </div>
-      <div class="btn-container">
-        <a class="play-btn" href="https://signup.na.leagueoflegends.com/en/signup/index#/" target="_blank"><button
-            class="play-btn">Play now!</button></a>
-      </div>
-
     </nav>
+    <img class="lol-img" src="images/lol-title.png">
+    <div class="btn-container">
+      <a class="play-btn" href="https://signup.na.leagueoflegends.com/en/signup/index#/" target="_blank"><button
+          class="play-btn">Play now!</button></a>
+    </div>
   </header>
   <div class="akali-container">
     <img src="./images/akali.png" alt="" class="akali-img">
@@ -38,7 +44,7 @@
 
   <div class="champions-title-container">
     <h1 class="champions-title-description">CHOOSE YOUR <br>
-      <span>CHAMPION</span>
+      <span class="champions-title-description">CHAMPION</span>
     </h1>
     <p>With more than 140 champions, you'll find the perfect match for <br> your playstyle. Master one, or master them
       all.</p>
@@ -51,11 +57,10 @@
             class="loupe"></i></div>
 
       <div class="filter-icons" id="icon-btns">
-        <div class="toggle-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
+        <div class="classes-container">
+          <button class="all-classes-btn">Classes<i><img src="images/arrow-filter.png"
+            id="arrow-classes"></i></button></div>
+        
         <div class="icons-imgs">
           <button class="all-button" id="all-btn" value="All" alt="All classes button filter"
             title="All classes">All</button>
