@@ -240,9 +240,15 @@ searchBar.addEventListener("input", (event)=>{
 });
 
 let toggleMenu = document.querySelector(".toggle-menu");
+let navLinks = document.querySelector(".nav-links-container");
+toggleMenu.addEventListener("click", ()=>{
+    navLinks.classList.toggle("active")
+})
+
+let classesBtn = document.querySelector(".all-classes-btn");
 let iconsImgs = document.querySelector(".icons-imgs");
 console.log(iconsImgs)
-toggleMenu.addEventListener("click", ()=>{
+classesBtn.addEventListener("click", ()=>{
     iconsImgs.classList.toggle("active")
 })
 

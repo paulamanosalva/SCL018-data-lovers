@@ -3,6 +3,7 @@
     src: url("fonts/Beaufort-Bold.ttf");
     font-family: Beaufort-Italic;
     src: url("fonts/Beaufort-Italic.ttf");
+
 }
 
 *{
@@ -481,6 +482,7 @@ footer{
     height: 100%;
     width: 75%;
 }
+
 .icons-imgs img{
     height: 100%;
     
@@ -512,10 +514,26 @@ footer{
     display: flex;
 }
 
+#arrow-classes, .all-classes-btn{
+    display: none;
+}
+
+#arrow-classes{
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    width: 12%;
+}
+
+.lol-img{
+    display: none;
+}
+
 @media (max-width: 768px ) {
     .list-container{
         width: 90%;
     }
+
     .header-list{
         width: 90%;
     }
@@ -523,21 +541,24 @@ footer{
         width: 90%;   
         justify-content: space-between;
     }
+
+    
     .filter-icons{
         position: relative;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         width: 40%;
-        
-      
     }
-    .filter-icons img{
+
+    .filter-icons div img{
         width: 30px;
-    }
+    } 
+
     .icons-imgs{
         display: none;
     }
+
     .all-button, .filter-icons-div{
         background-color: rgb(176,199,245);
         width: 100%;
@@ -546,25 +567,43 @@ footer{
         align-items: center;
 
     }
-    .toggle-menu{
-        height: 90%;
+
+    .classes-container{
+        width: 50%;
+        height: 100%;
         display: flex;
+        margin-right: 2%;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
+        position: relative;
     }
-    .bar{
-        height: 5px;
-        width: 30px;
-        border-radius: 2px;
-        background-color: black;
-        
+
+    .all-classes-btn{
+        width: 100%;
+        height: 70%;
+        border-radius: 3px;
+        border:none;
+        background-color: rgb(10,11,38);
+        color: rgb(125,145,192);
+        font-weight: bold;
+        text-align: start;
+        cursor: pointer;
+    
     }
+
+    #arrow-classes, .all-classes-btn{
+        display: block;
+    }
+
+    
+
     .icons-imgs.active {
         display: flex;
         flex-direction: column;
-        width: 200px;
+        width: 50%;
         position: absolute;
-        top: 332%;
+        top: 320%;
+        left: 24%;
     }
     .search-container{
         width: 25%;
@@ -577,11 +616,173 @@ footer{
         color: black;
         height: 30px;
     }
+    .akali-container{
+        display: none;
+    }
 }
+
 /* @media screen 
-  and (device-width: 320px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 2) 
-  and (orientation: portrait) {
+    and (device-width: 320px) 
+    and (device-height: 640px) 
+    and (-webkit-device-pixel-ratio: 2) 
+    and (orientation: portrait) {
 
 } */
+
+@media (max-width: 460px ){
+    *{
+        font-size: 10px;
+    } 
+    .icons-imgs.active {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        position: absolute;
+        top: 470%;
+    }
+    #arrow-classes{
+        display: none;
+    }
+    .arrow-filter{
+        display:none;
+    }
+    
+.champ-name{
+    width: 20%; 
+    margin-left: 1em;
+    
+}
+.champion-btn{
+    padding: 0%;
+}
+
+.champ-title{
+    width: 20%;
+    font-size: 8px;
+    
+}
+
+.champ-name{
+    font-size: 9,5px;
+}
+
+.champ-icon img{
+    margin-left: 0.2%;
+    width: 2.25em;
+}
+
+.champ-difficulty img{
+    width: 100%;
+
+}
+
+.champ-difficulty{
+width: 15%;
+}
+
+.champ-class, .empty-class{
+    justify-content: center;
+    margin-left: 0.2em;
+    width: 10%;
+}
+
+.class-icon, .fake-icon{
+    width: 1.5em;
+    
+}
+
+.kda-container{
+    margin-top: 15%;
+
+}
+.loupe{
+    display:none;
+}
+.champions-title-description h1{
+    font-size: 3em;
+}
+
+.champions-title-description span{
+    font-size: 4em;
+}
+
+.toggle-menu{
+    margin-left: 3%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+} 
+
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+a{
+    margin: 0% 15% 0% 0%;
+}
+
+a:hover{
+    color:white;
+}
+
+.nav-links-container{
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    justify-content: space-around;
+    height: 120px;
+    width: 25%;
+    background-color: black;
+}
+
+.nav-links-container{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-links-container.active{
+    display: flex;
+}
+
+
+.bar{
+    
+    height: 5px;
+    width: 30px;
+    border-radius: 2px;
+    background-color: rgb(169,188,239);
+    
+} 
+
+footer{
+    height:20%;
+}
+
+.footer-p{
+    /* height: 10%; */
+    font-size: 0.em;
+}
+
+.rated-img{
+    height: 50px;
+}
+.riot-logo{
+    margin-top:8%;
+}
+
+.logo-header-container{
+    display: none;
+    }
+
+.lol-img{
+    display: block;
+    height: 80%;
+    margin-left: 20%;
+}
+} 
