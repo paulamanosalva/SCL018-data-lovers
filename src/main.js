@@ -241,7 +241,6 @@ searchBar.addEventListener("input", (event)=>{
 
 let toggleMenu = document.querySelector(".toggle-menu");
 let iconsImgs = document.querySelector(".icons-imgs");
-console.log(iconsImgs)
 toggleMenu.addEventListener("click", ()=>{
     iconsImgs.classList.toggle("active")
 })
