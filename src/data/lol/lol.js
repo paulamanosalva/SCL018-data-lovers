@@ -5835,7 +5835,7 @@ export default {
       name: "Twisted Fate",
       title: "the Card Master",
       img:
-        "https://www.masterypoints.com/assets/img/lol/champion_icons/Maokai.png",
+        "https://www.masterypoints.com/assets/img/lol/champion_icons/TwistedFate.png?v=v8",
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Maokai_0.jpg",
       blurb:
