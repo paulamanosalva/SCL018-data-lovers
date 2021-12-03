@@ -1,7 +1,5 @@
 # Data Lovers: League of legends ⚔️
-*Paula Manosalva - Yésika Rodríguez*
 
-***
 ## Resumen del proyecto 📌
 
 En este proyecto construimos una interfaz web que permite visualizar todos los campeones del juego y filtrarlos según su clase o dificultad de uso. Existen 6 clases y 3 niveles de dificultad. 
@@ -21,7 +19,7 @@ Este proyecto me permitió reforzar mis conocimientos sobre manipulación de arr
 
 ## Diseño de la interfaz 🔷
 
-Disfruté mucho del proceso de diseño porque me gusta el juego, con Yés decidimos basar la estética de la página en KDA, que es una banda integrada por campeonas (personajes) del juego. En general todo jugador de lol es fan de KDA, así que recibimos feedback positivo por parte de nuestros usuarios.  
+Disfruté mucho del proceso de diseño porque me gusta el juego, decidimos basar la estética de la página en KDA, que es una banda integrada por campeonas (personajes) del juego. En general todo jugador de lol es fan de KDA, así que recibimos feedback positivo por parte de nuestros usuarios.  
 
 <br />
 
